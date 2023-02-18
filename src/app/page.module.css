@@ -8,6 +8,10 @@
   font-family: var(--font-mono);
 }
 
+.topbar {
+  position: fixed;
+  color: black;
+}
 .title {
   display: flex;
   flex-direction: column;
@@ -17,6 +21,15 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
+}
+
+.menu {
+  color: #ffffff;
+  font-family: var(--font-mono);
+  position: absolute;
+  top: 1rem;
+  left: 80%;
+  font-size: 1rem;
 }
 
 .description {
@@ -36,7 +49,8 @@
   align-items: center;
   width: 100%;
   height: 50vh;
-  background-image: linear-gradient(45deg, #F3C0FF 25%, #9DE1FF 100%);
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
 }
 
 .projectSection {
@@ -78,20 +92,27 @@
   padding: 1rem 1.2rem;
   margin: 1rem;
   border-radius: var(--border-radius);
-  background:#F3C0FF;
+  background:#32f787;
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+}
+
+.cardTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.cardTitle {
+  margin: 0;
+  padding: 0;
 }
 
 .card span {
   display: inline-block;
   transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-  font-family: var(--font-mono);
 }
 
 .card p {
@@ -102,6 +123,11 @@
   max-width: 34ch;
 }
 
+.github {
+  /* transform: scale(.90); */
+  padding-left: 1rem;
+  display:inline;
+}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -141,10 +167,6 @@
   .card {
     padding: 1rem 2.5rem;
     margin: 0 3rem 0 3rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
   }
 
   .center {
